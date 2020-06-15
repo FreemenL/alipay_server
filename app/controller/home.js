@@ -9,7 +9,10 @@ class HomeController extends Controller {
   }
   async description(){
     const { ctx } = this;
-    console.log(ctx);
+    ctx.body={
+      code:0,
+      request:ctx.request.body
+    }
   }
 }
 
