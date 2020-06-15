@@ -14,7 +14,12 @@ module.exports = appInfo => {
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1592142283090_4632';
-
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+    domainWhiteList: [ '*' ],
+  };
   // add your middleware config here
   config.middleware = [];
 
